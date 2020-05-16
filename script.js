@@ -28,10 +28,13 @@ function main() {
     } else if (real < 0) {
         subtitleResult.innerHTML = `Falta R$${(real * -1).toFixed(2).replace('.', ',')}`
         subtitleResult.className = 'subtitle-active'
+        
+        return
     } else if (real == 0) {
         subtitleResult.innerHTML = "Não há troco"
         subtitleResult.className = 'subtitle-active'
         
+        return
     } else {
         real = real.toFixed(2)
     }
