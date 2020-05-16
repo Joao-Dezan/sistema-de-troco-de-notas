@@ -1,0 +1,100 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.title {
+    font-size: 32px;
+    color: rgb(3, 131, 61);
+}
+
+#subtitle-notas, #subtitle-coins, #subtitle-result {
+    border: 1px solid rgb(3, 131, 61);
+    border-radius: 8px;
+    text-align: center;
+    font-size: 22px;
+    padding: 6px;
+    color: rgb(3, 131, 61);
+}
+
+#subtitle-result {
+    display: none;
+}
+
+.subtitle-active {
+    border: 1px solid rgb(3, 131, 61);
+    border-radius: 8px;
+    text-align: center;
+    font-size: 22px;
+    padding: 6px;
+    background-color: rgb(3, 131, 61);
+    color: #fff !important;
+}
+
+.content {
+    border: 1px solid #eee;
+    border-radius: 10px;
+    padding: 5px;
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.content .area-input, .content button {
+    margin: 15px;
+}
+
+.content .area-input {
+    width: 400px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.content button {
+    cursor: pointer;
+    font-size: 18px;
+    width: 90%;
+    background-color: #fff;
+    border: 1px solid #aaa;
+    border-radius: 8px;
+    padding: 10px 0;
+    margin-top: 15px;
+}
+
+.content button:hover {
+    border: 1px solid rgb(3, 131, 61);
+    color: rgb(3, 131, 61);
+}
+
+.area-input label {
+    font-size: 22px;
+}
+
+.area-input input {
+    width: 100px;
+    border: 1px solid rgb(3, 131, 61);
+    border-radius: 8px;
+    padding: 8px;
+}
+
+#result {
+    width: 100%;
+    margin-top: 20px;
+}
+
+#result ul {
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#result li {
+    padding: 10px;
+    border-bottom: 1px solid rgb(3, 131, 61);
+}
