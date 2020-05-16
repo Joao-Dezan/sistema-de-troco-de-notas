@@ -55,10 +55,13 @@ body {
     align-items: baseline;
 }
 
-.content button {
+.content a {
+    text-decoration: none;
+    text-align: center;
     color: rgb(3, 131, 61);
     cursor: pointer;
     font-size: 1.2em;
+    font-weight: 500;
     width: 90%;
     background-color: #fff;
     border: 1px solid rgb(3, 131, 61);
@@ -67,7 +70,7 @@ body {
     margin-top: 15px;
 }
 
-.content button:hover {
+.content a:hover {
     transition: 350ms;
     background-color: rgb(3, 131, 61);
     border: 1px solid #eee;
