@@ -19,6 +19,7 @@ body {
 
 #subtitle-result {
     display: none;
+    margin-bottom: 15px;
 }
 
 .subtitle-active {
@@ -94,7 +95,7 @@ body {
 
 #result {
     width: 100%;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 #result ul {
