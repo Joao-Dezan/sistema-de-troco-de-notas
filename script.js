@@ -20,11 +20,14 @@ function main() {
 
     subtitleResult.style.display = 'block'
 
-    if (Number.isNaN(real) || real == null || real == undefined || real < 0) {
+    if (Number.isNaN(real) || real == null || real == undefined) {
         subtitleResult.innerHTML = "Valor Inválido!"
         subtitleResult.className = 'subtitle-active'
         
         return
+    } else if (real < 0) {
+        subtitleResult.innerHTML = `Falta R$${(real * -1).toFixed(2).replace('.', ',')}`
+        subtitleResult.className = 'subtitle-active'
     } else if (real == 0) {
         subtitleResult.innerHTML = "Não há troco"
         subtitleResult.className = 'subtitle-active'
