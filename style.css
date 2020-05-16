@@ -56,25 +56,26 @@ body {
 }
 
 .content a {
+    display: inline-block;
     text-decoration: none;
     text-align: center;
-    color: rgb(3, 131, 61);
+    color: rgb(255, 255, 255);
     cursor: pointer;
-    font-size: 1.2em;
-    font-weight: 500;
+    font-size: 1.3em;
+    font-weight: bold;
     width: 90%;
-    background-color: #fff;
-    border: 1px solid rgb(3, 131, 61);
+    background-color: rgb(3, 131, 61);
     border-radius: 8px;
     padding: 8px 0;
     margin-top: 15px;
+    box-shadow: 3px 3px 0 1px #027937;
+
+    transition: box-shadow 0.2s ease, transform 0.2s;
 }
 
-.content a:hover {
-    transition: 350ms;
-    background-color: rgb(3, 131, 61);
-    border: 1px solid #eee;
-    color: #fff;
+.content a:active {
+    box-shadow: 0 0 0 0 #035528, inset 3px 3px 3px #035528;
+    transform: translate(3px, 3px);
 }
 
 .area-input label {
