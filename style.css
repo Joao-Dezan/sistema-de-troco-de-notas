@@ -4,7 +4,7 @@ body {
 
 .title {
     text-align: center;
-    font-size: 5.5vmin;
+    font-size: 2em;
     color: rgb(3, 131, 61);
 }
 
@@ -12,7 +12,7 @@ body {
     border: 1px solid rgb(3, 131, 61);
     border-radius: 8px;
     text-align: center;
-    font-size: 4vmin;
+    font-size: 1.3em;
     padding: 6px;
     color: rgb(3, 131, 61);
 }
@@ -25,7 +25,7 @@ body {
     border: 1px solid rgb(3, 131, 61);
     border-radius: 8px;
     text-align: center;
-    font-size: 4vmin;
+    font-size: 1.3em;
     padding: 6px;
     background-color: rgb(3, 131, 61);
     color: #fff !important;
@@ -58,7 +58,7 @@ body {
 .content button {
     color: rgb(3, 131, 61);
     cursor: pointer;
-    font-size: 3.5vmin;
+    font-size: 1.2em;
     width: 90%;
     background-color: #fff;
     border: 1px solid rgb(3, 131, 61);
@@ -75,7 +75,7 @@ body {
 }
 
 .area-input label {
-    font-size: 3.5vmin;
+    font-size: 1.1em;
 }
 
 .area-input input {
@@ -91,7 +91,7 @@ body {
 }
 
 #result ul {
-    font-size: 3vmin;
+    font-size: 1.2em;
     font-weight: 500;
     text-align: center;
     margin: 0;
@@ -102,4 +102,16 @@ body {
 #result li {
     padding: 10px;
     border-bottom: 1px solid rgb(3, 131, 61);
+}
+
+@media (min-width: 300px) {
+    body{
+        font-size: 11px;
+    }
+}
+
+@media (min-width: 600px) {
+    body {
+        font-size: 15px;
+    }
 }
