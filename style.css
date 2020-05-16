@@ -54,19 +54,22 @@ body {
 }
 
 .content button {
+    color: rgb(3, 131, 61);
     cursor: pointer;
     font-size: 18px;
     width: 90%;
     background-color: #fff;
-    border: 1px solid #aaa;
+    border: 1px solid rgb(3, 131, 61);
     border-radius: 8px;
     padding: 10px 0;
     margin-top: 15px;
 }
 
 .content button:hover {
-    border: 1px solid rgb(3, 131, 61);
-    color: rgb(3, 131, 61);
+    transition: 350ms;
+    background-color: rgb(3, 131, 61);
+    border: 1px solid #eee;
+    color: #fff;
 }
 
 .area-input label {
