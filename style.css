@@ -70,7 +70,7 @@ body {
     margin-top: 15px;
     box-shadow: 3px 3px 0 1px #027937;
 
-    transition: box-shadow 0.2s ease, transform 0.2s;
+    transition: box-shadow 0.3s ease, transform 0.3s;
 }
 
 .content a:active {
