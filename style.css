@@ -84,6 +84,7 @@ body {
 }
 
 .area-input input {
+    font-size: 1.1em;
     width: 100px;
     border: 1px solid rgb(3, 131, 61);
     border-radius: 8px;
