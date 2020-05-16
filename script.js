@@ -6,8 +6,8 @@ function main() {
     document.querySelector('#result #subtitle-result').className = ''
     document.querySelector('#result #subtitle-result').style.display = 'none'
 
-    let total = Number(document.querySelector('#total').value.replace(',', '.'))
-    let pago = Number(document.querySelector('#pago').value.replace(',', '.'))
+    let total = document.querySelector('#total').value.replace(',', '.')
+    let pago = document.querySelector('#pago').value.replace(',', '.')
 
     let listNotas = document.querySelector('#result ul#list-notas')
     let listCoins = document.querySelector('#result ul#list-coins')
@@ -16,11 +16,11 @@ function main() {
     let subtitleCoins = document.querySelector('#result #subtitle-coins')
     let subtitleResult = document.querySelector('#result #subtitle-result')
 
-    let real = pago - total
+    let real = Number(pago) - Number(total)
 
     subtitleResult.style.display = 'block'
 
-    if (Number.isNaN(real) || real == null || real == undefined) {
+    if (Number.isNaN(real) || total == '' || pago == '' || real == null || total <= 0 || pago <= 0) {
         subtitleResult.innerHTML = "Valor Inválido!"
         subtitleResult.className = 'subtitle-active'
         
@@ -28,13 +28,14 @@ function main() {
     } else if (real < 0) {
         subtitleResult.innerHTML = `Falta R$${(real * -1).toFixed(2).replace('.', ',')}`
         subtitleResult.className = 'subtitle-active'
-        
+
         return
     } else if (real == 0) {
         subtitleResult.innerHTML = "Não há troco"
         subtitleResult.className = 'subtitle-active'
-        
+
         return
+        
     } else {
         real = real.toFixed(2)
     }
