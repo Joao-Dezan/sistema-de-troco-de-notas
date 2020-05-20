@@ -1,10 +1,6 @@
 function main() {
     document.querySelector('#result ul#list-notas').innerHTML = ''
     document.querySelector('#result ul#list-coins').innerHTML = ''
-    //document.querySelector('#result #subtitle-notas').className = ''
-    //document.querySelector('#result #subtitle-coins').className = ''
-    //document.querySelector('#result #subtitle-result').className = ''
-    //document.querySelector('#result #subtitle-result').style.display = 'none'
 
     const total = document.querySelector('#total').value.replace(',', '.')
     const pago = document.querySelector('#pago').value.replace(',', '.')
@@ -20,11 +16,9 @@ function main() {
     subtitleNotas.classList.remove(subtitleActiveClass)
     subtitleCoins.classList.remove(subtitleActiveClass)
     subtitleResult.classList.remove(subtitleActiveClass)
-    subtitleResult.style.display = 'none'
+    subtitleResult.style.opacity = 1
 
     let real = Number(pago) - Number(total)
-
-    subtitleResult.style.display = 'block'
 
     if (Number.isNaN(real) || total == '' || pago == '' || real == null || total <= 0 || pago <= 0) {
         subtitleResult.innerHTML = "Valor Inválido!"
@@ -60,7 +54,7 @@ function main() {
                 if (notas[nota].qtd > 1) listItem.innerHTML = `${notas[nota].qtd} notas de ${notas[nota].valor} reais`
                 else listItem.innerHTML = `${notas[nota].qtd} nota de ${notas[nota].valor} reais`
 
-                subtitleNotas.className = 'subtitle-active'
+                subtitleNotas.className = subtitleActiveClass
                 listNotas.appendChild(listItem)
             } else {
                 if (notas[nota].valor == 1) {
@@ -74,7 +68,7 @@ function main() {
                     else listItem.innerHTML = `${notas[nota].qtd} moeda de ${notas[nota].valor * 100} centavos`
                 }  
 
-                subtitleCoins.className = 'subtitle-active'
+                subtitleCoins.className = subtitleActiveClass
                 listCoins.appendChild(listItem)
             }
 

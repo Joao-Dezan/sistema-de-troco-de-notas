@@ -18,7 +18,7 @@ body {
 }
 
 #subtitle-result {
-    display: none;
+    opacity: 0;
     margin-bottom: 15px;
 }
 
