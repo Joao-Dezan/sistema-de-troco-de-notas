@@ -8,8 +8,8 @@ function main() {
     const listNotas = document.querySelector('#result ul#list-notas')
     const listCoins = document.querySelector('#result ul#list-coins')
 
-    listNotas.removeChild('li')
-    listCoins.removeChild('li')
+    listNotas.removeChild(Node('li'))
+    listCoins.removeChild(Node('li'))
 
     const subtitleNotas = document.querySelector('#result #subtitle-notas')
     const subtitleCoins = document.querySelector('#result #subtitle-coins')
