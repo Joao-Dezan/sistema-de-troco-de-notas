@@ -8,8 +8,8 @@ function main() {
     const listNotas = document.querySelector('#result ul#list-notas')
     const listCoins = document.querySelector('#result ul#list-coins')
 
-    listNotas.removeChild(Node('li'))
-    listCoins.removeChild(Node('li'))
+    listNotas.removeChild(document.querySelector('.list-item'))
+    listCoins.removeChild(document.querySelector('.list-item'))
 
     const subtitleNotas = document.querySelector('#result #subtitle-notas')
     const subtitleCoins = document.querySelector('#result #subtitle-coins')
@@ -52,12 +52,13 @@ function main() {
         if (notas[nota].qtd != 0) {
 
             let listItem = document.createElement('li')
+            listItem.classList.add('list-item')
 
             if (notas[nota].valor > 1) {
                 if (notas[nota].qtd > 1) listItem.innerHTML = `${notas[nota].qtd} notas de ${notas[nota].valor} reais`
                 else listItem.innerHTML = `${notas[nota].qtd} nota de ${notas[nota].valor} reais`
 
-                subtitleNotas.className = subtitleActiveClass
+                subtitleNotas.classList.add(subtitleActiveClass)
                 listNotas.appendChild(listItem)
             } else {
                 if (notas[nota].valor == 1) {
@@ -71,7 +72,7 @@ function main() {
                     else listItem.innerHTML = `${notas[nota].qtd} moeda de ${notas[nota].valor * 100} centavos`
                 }  
 
-                subtitleCoins.className = subtitleActiveClass
+                subtitleCoins.classList.add(subtitleActiveClass)
                 listCoins.appendChild(listItem)
             }
 
