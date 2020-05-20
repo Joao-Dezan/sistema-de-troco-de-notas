@@ -8,8 +8,8 @@ function main() {
     const listNotas = document.querySelector('#result ul#list-notas')
     const listCoins = document.querySelector('#result ul#list-coins')
 
-    listNotas.removeChild(document.querySelector('.list-item'))
-    listCoins.removeChild(document.querySelector('.list-item'))
+    listNotas.textContent = ''
+    listCoins.textContent = ''
 
     const subtitleNotas = document.querySelector('#result #subtitle-notas')
     const subtitleCoins = document.querySelector('#result #subtitle-coins')
@@ -52,7 +52,6 @@ function main() {
         if (notas[nota].qtd != 0) {
 
             let listItem = document.createElement('li')
-            listItem.classList.add('list-item')
 
             if (notas[nota].valor > 1) {
                 if (notas[nota].qtd > 1) listItem.innerHTML = `${notas[nota].qtd} notas de ${notas[nota].valor} reais`
