@@ -1,20 +1,26 @@
 function main() {
     document.querySelector('#result ul#list-notas').innerHTML = ''
     document.querySelector('#result ul#list-coins').innerHTML = ''
-    document.querySelector('#result #subtitle-notas').className = ''
-    document.querySelector('#result #subtitle-coins').className = ''
-    document.querySelector('#result #subtitle-result').className = ''
-    document.querySelector('#result #subtitle-result').style.display = 'none'
+    //document.querySelector('#result #subtitle-notas').className = ''
+    //document.querySelector('#result #subtitle-coins').className = ''
+    //document.querySelector('#result #subtitle-result').className = ''
+    //document.querySelector('#result #subtitle-result').style.display = 'none'
 
-    let total = document.querySelector('#total').value.replace(',', '.')
-    let pago = document.querySelector('#pago').value.replace(',', '.')
+    const total = document.querySelector('#total').value.replace(',', '.')
+    const pago = document.querySelector('#pago').value.replace(',', '.')
 
-    let listNotas = document.querySelector('#result ul#list-notas')
-    let listCoins = document.querySelector('#result ul#list-coins')
+    const listNotas = document.querySelector('#result ul#list-notas')
+    const listCoins = document.querySelector('#result ul#list-coins')
 
-    let subtitleNotas = document.querySelector('#result #subtitle-notas')
-    let subtitleCoins = document.querySelector('#result #subtitle-coins')
-    let subtitleResult = document.querySelector('#result #subtitle-result')
+    const subtitleNotas = document.querySelector('#result #subtitle-notas')
+    const subtitleCoins = document.querySelector('#result #subtitle-coins')
+    const subtitleResult = document.querySelector('#result #subtitle-result')
+    const subtitleActiveClass= 'subtitle-active'
+
+    subtitleNotas.classList.remove(subtitleActiveClass)
+    subtitleCoins.classList.remove(subtitleActiveClass)
+    subtitleResult.classList.remove(subtitleActiveClass)
+    subtitleResult.style.display = 'none'
 
     let real = Number(pago) - Number(total)
 
@@ -22,17 +28,17 @@ function main() {
 
     if (Number.isNaN(real) || total == '' || pago == '' || real == null || total <= 0 || pago <= 0) {
         subtitleResult.innerHTML = "Valor Inválido!"
-        subtitleResult.className = 'subtitle-active'
+        subtitleResult.className = subtitleActiveClass
         
         return
     } else if (real < 0) {
         subtitleResult.innerHTML = `Falta R$${(real * -1).toFixed(2).replace('.', ',')}`
-        subtitleResult.className = 'subtitle-active'
+        subtitleResult.className = subtitleActiveClass
 
         return
     } else if (real == 0) {
         subtitleResult.innerHTML = "Não há troco"
-        subtitleResult.className = 'subtitle-active'
+        subtitleResult.className = subtitleActiveClass
 
         return
         
