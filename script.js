@@ -1,12 +1,15 @@
 function main() {
-    document.querySelector('#result ul#list-notas').innerHTML = ''
-    document.querySelector('#result ul#list-coins').innerHTML = ''
+    //document.querySelector('#result ul#list-notas').innerHTML = ''
+    //document.querySelector('#result ul#list-coins').innerHTML = ''
 
     const total = document.querySelector('#total').value.replace(',', '.')
     const pago = document.querySelector('#pago').value.replace(',', '.')
 
     const listNotas = document.querySelector('#result ul#list-notas')
     const listCoins = document.querySelector('#result ul#list-coins')
+
+    listNotas.removeChild('li')
+    listCoins.removeChild('li')
 
     const subtitleNotas = document.querySelector('#result #subtitle-notas')
     const subtitleCoins = document.querySelector('#result #subtitle-coins')
