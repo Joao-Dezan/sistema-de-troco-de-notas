@@ -1,7 +1,5 @@
 function main() {
-    //document.querySelector('#result ul#list-notas').innerHTML = ''
-    //document.querySelector('#result ul#list-coins').innerHTML = ''
-
+    
     const total = document.querySelector('#total').value.replace(',', '.')
     const pago = document.querySelector('#pago').value.replace(',', '.')
 
