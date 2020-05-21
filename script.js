@@ -133,11 +133,25 @@ function retornarCedulas(real) {
     }
 
     for (nota in notas) {
-        
-        while (real >= notas[nota].valor) {
+        // Uma forma
+        // Consome muito processamento
+
+        /*while (real >= notas[nota].valor) {
             real -= notas[nota].valor
             real = Number(real).toFixed(2)
             notas[nota].qtd++
+        }*/
+
+        // Outra forma
+        // Mais otimizada
+
+        if (real >= notas[nota].valor) {
+            let quantidade = Math.trunc(real / notas[nota].valor)
+
+            real -= notas[nota].valor * quantidade
+            real = Number(real).toFixed(2)
+
+            notas[nota].qtd += quantidade
         }
     }
 
